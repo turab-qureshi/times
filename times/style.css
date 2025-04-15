@@ -1,0 +1,204 @@
+@font-face {
+  font-family: comicsans;
+  src: url('comicsans.ttf');
+}
+.child{
+  font-family: comicsans;
+  font-size: 32px;
+}
+body{
+  font-family: comicsans;
+  font-size: 18px;
+  padding: 10px;
+}
+.dragit{
+  border: none;
+  border-radius: 15px;
+  position: relative;
+  width: 80px; 
+  padding: 8px;
+  color: #fff;
+  cursor: move;
+  text-align: center;
+}
+.dragitcolor-1{background-color: #00D710;}
+.dragitcolor-2{background-color: #00D7A3;}
+.dragitcolor-3{background-color: #0099D7;}
+.dragitcolor-4{background-color: #0044D7;}
+.dragitcolor-5{background-color: #5100D7;}
+.dragitcolor-6{background-color: #AD00D7;}
+.dragitcolor-7{background-color: #D700B6;}
+.dragitcolor-8{background-color: #D7006F;}
+.dragitcolor-9{background-color: #A6D700;}
+.dragitcolor-10{background-color: #D73B00;}
+.dragitcolor-11{background-color: #D77C00;}
+.dragitcolor-12{background-color: #D7BD00;}
+.catch, .catch5{
+  width: 82px; 
+  height: 45px;
+  padding: 0px;
+  border: 1px solid #000;
+  border-radius: 15px;
+}
+.throw{
+  width: 82px; 
+  height: 45px;
+  padding: 0px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+.section-o-left{
+  border-radius: 40px 0px 0px 40px;
+  background-color: #BEFFF7;
+  padding: 40px;
+  text-align: left;
+}
+.section-o-right{
+  border-radius: 0px 40px 40px 0px;
+  background-color: #FEFFBE;
+  padding: 40px;
+}
+.section-e-left{
+  border-radius: 40px 0px 0px 40px;
+  background-color: #E7BEFF;
+  padding: 40px;
+  text-align: left;
+}
+.section-e-right{
+  border-radius: 0px 40px 40px 0px;
+  background-color: #E0FCB3;
+  padding: 40px;
+}
+.act{
+  width: 100%;
+  border-collapse: collapse;
+}
+.act td{
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  border: 2px solid #000;
+}
+.tab-sel{
+  color: inherit;
+  font-size: 23px;
+  border: none;
+  border-radius: 10px 0px 10px 0px;
+  padding: 10px 20px 10px 20px;
+  margin: 5px;
+  width: 250px;
+  display: inline-block;
+  cursor: pointer;
+}
+.sel-next, .sel-main{
+  color: inherit;
+  font-size: 18px;
+  border: none;
+  padding: 0px 15px 0px 15px;
+}
+.sel-main{
+  background-color: #8FFFA0;
+  border-radius: 15px 0px 0px 15px;
+}
+.sel-next{
+  background-color: #FFC48F;
+  border-radius: 0px 15px 15px 0px;
+}
+.intro_app, .act2_tab{
+  width: 100%;
+}
+.intro_app td{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}
+.grid_select{
+  cursor: pointer;
+}
+.check-button{
+  background-color: #EE9102;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px 0px 20px 0px;
+  padding: 10px 20px 10px 20px;
+  margin-top: 3px;
+}
+.act2_txt, #act8-txt{
+  border: 1px solid #EE9102;
+  background-color: inherit;
+  font-size: 32px;
+  font-family: comicsans;
+  text-align: center;
+}
+.act2_txt{
+  width: 100px;
+}
+#act8-txt{
+  width: 100%;
+}
+.act3_txt, .act7_txt{
+  width: 60px;
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid #000;
+  text-align: center;
+}
+.correction, .correction3{
+  font-family: comicsans;
+  font-size: 28px;
+  color: #5B9300;
+  border: 3px solid #5B9300;
+  border-radius: 20px;
+  padding: 0px 10px 0px 10px;
+  margin: 3px;
+}
+.act6-question, .act6-answer, .act8-question, .act8-answer, #act6-forward, .act6-counter{
+  width: 100%;
+  color: #fff;
+  border: none;
+  margin: 5px;
+  font-weight: bold;
+}
+.act6-question, .act8-question{
+  background-color: #00CB87;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 30px;
+  letter-spacing: 12px;
+}
+.act6-answer, .act8-answer{
+  background-color: #CB008D;
+  padding: 5px;
+  border-radius: 15px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.act6-counter{
+  background-color: #1F00CB;
+  padding: 5px;
+  border-radius: 15px;
+  font-size: 25px;
+}
+#act6-forward{
+  background-color: #7B00CB;
+  padding: 5px;
+  border-radius: 15px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.word_prob li{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.word_prob{
+  list-style-type:circle;
+  text-align: left;
+}
+.act8-txt{
+  width: 100%;
+  border: none;
+}

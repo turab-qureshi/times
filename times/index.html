@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Times Table Practice</title>
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173542820-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-173542820-1');
+    </script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+          <h1 style="margin: 10px;"><span class="which_table"></span> Times Table Activities</h1>
+          <div>
+          </div>
+          <div class="row activity-section" id="activity-section-1"></div>
+          <div class="row activity-section" id="activity-section-2" style="display: none;">
+            <div class="col-md-12">
+              <div style="width: 100%; text-align: right;">
+                <input type="button" class="sel-main" onclick="show_section(1)" value="Main Screen" />
+                <input type="button" class="sel-next" onclick="show_section(3)" value="Next Activity" />
+              </div>
+              <div class="row">
+                <div class="col-md-4 section-o-left">
+                  <h3>Look and read aloud</h3>
+                  <ul style="margin-top: 40px;">
+                    <li>Familiarise yourself with the <span class="which_table"></span> Times Table</li>
+                    <li>Are the multiples odd, even or both?</li>
+                    <li>Do you notice any patterns?</li>
+                  </ul>
+                </div>
+                <div class="col-md-8 section-o-right" style="text-align: center;">
+                  <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                      <h3><span class="which_table"></span> Times Table</h3>
+                      <div id="intro"></div>
+                    </div>
+                    <div class="col-md-3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row activity-section" id="activity-section-3" style="display: none;">
+            <div class="col-md-12">
+              <div style="width: 100%; text-align: right;">
+                <input type="button" class="sel-main" onclick="show_section(1)" value="Main Screen" />
+                <input type="button" class="sel-next" onclick="show_section(4)" value="Next Activity" />
+              </div>
+              <div class="row">
+                <div class="col-md-4 section-e-left">
+                  <h3>Activity 1</h3>
+                  <b>Count in <span class="which_table"></span>s and shade in the grid</b>
+                  <ul style="margin-top: 40px;">
+                    <li>Start counting at <span class="which_table"></span></li>
+                    <li>Click all numbers in the series of counting in <span class="which_table"></span>s</li>
+                  </ul>
+                </div>
+                <div class="col-md-8 section-e-right" style="text-align: right;">
+                  <div id="grid"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row activity-section" id="activity-section-4" style="display: none;">
+            <div class="col-md-12">
+              <div style="width: 100%; text-align: right;">
+                <input type="button" class="sel-main" onclick="show_section(1)" value="Main Screen" />
+                <input type="button" class="sel-next" onclick="show_section(5)" value="Next Activity" />
+              </div>
+              <div class="row">
+                <div class="col-md-4 section-o-left">
+                  <h3>Activity 2</h3>
+                  <b>Work out these answers</b>
+                  <ul style="margin-top: 40px;">
+                    <li>Enter the correct answers</li>
+                    <li>After completing the activity, click "Check"</li>
+                  </ul>
+                </div>
+                <div class="col-md-8 section-o-right" style="text-align: right;">
+                  <div id="act2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row activity-section" id="activity-section-5" style="display: none;">
+            <div class="col-md-12">
+              <div style="width: 100%; text-align: right;">
+                <input type="button" class="sel-main" onclick="show_section(1)" value="Main Screen" />
+                <input type="button" class="sel-next" onclick="show_section(6)" value="Next Activity" />
+              </div>
+              <div class="row">
+                <div class="col-md-4 section-e-left">
+                  <h3>Activity 3</h3>
+                  <b>Count in <span class="which_table"></span>s up to <span class="upto_table"></span></b>
+                  <ul style="margin-top: 40px;">
+                    <li>Type in the correct numbers in the sequence</li>
+                    <li>After completing the activity, click "Check"</li>
+                  </ul>
+                </div>
+                <div class="col-md-8 section-e-right" style="text-align: center;">
+                  <div id="act3" style="width: 100%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row activity-section" id="activity-section-6" style="display: none;">
+            <div class="col-md-12">
+              <div style="width: 100%; text-align: right;">
+                <input type="button" class="sel-main" onclick="show_section(1)" value="Main Screen" />
+                <input type="button" class="sel-next" onclick="show_section(7)" value="Next Activity" />
+              </div>
+              <div class="row">
+                <div class="col-md-4 section-o-left">
+                  <h3>Activity 4</h3>
+                  <b>Drag the correct answer to the calculation</b>
+                  <ul style="margin-top: 40px;">
+                    <li>Drag the correct numbers to the given calculations</li>
+                    <li>After completing the activity, click "Check"</li>
+                  </ul>
+                </div>
+                <div class="col-md-8 section-o-right" style="text-align: right;">
+                  <div id="act4" style="width: 100%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row activity-section" id="activity-section-7" style="display: none;">
+            <div class="col-md-12">
+              <div style="width: 100%; text-align: right;">
+                <input type="button" class="sel-main" onclick="show_section(1)" value="Main Screen" />
+                <input type="button" class="sel-next" onclick="show_section(8)" value="Next Activity" />
+              </div>
+              <div class="row">
+                <div class="col-md-4 section-e-left">
+                  <h3>Activity 5</h3>
+                  <b>Drag the correct answer to the shuffled calculation</b>
+                  <ul style="margin-top: 40px;">
+                    <li>Drag the correct numbers to the given shuffled calculations</li>
+                    <li>After completing the activity, click "Check"</li>
+                  </ul>
+                </div>
+                <div class="col-md-8 section-e-right" style="text-align: right;">
+                  <div id="act5" style="width: 100%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row activity-section" id="activity-section-8" style="display: none;">
+            <div class="col-md-12">
+              <div style="width: 100%; text-align: right;">
+                <input type="button" class="sel-main" onclick="show_section(1)" value="Main Screen" />
+                <input type="button" class="sel-next" onclick="show_section(9)" value="Next Activity" />
+              </div>
+              <div class="row">
+                <div class="col-md-4 section-o-left">
+                  <h3>Activity 6</h3>
+                  <b>Multiple Choice Questions</b>
+                  <ul style="margin-top: 40px;">
+                    <li>Click on the correct answers</li>
+                    <li>There are total 12 questions</li>
+                    <li>Summary will show up once the activity is complete</li>
+                  </ul>
+                </div>
+                <div class="col-md-8 section-o-right" style="text-align: center;">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="act6-question" id="act6-question" data-cor=""></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="act6-answer" id="act6-ans1" data-ans=""></div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="act6-answer" id="act6-ans2" data-ans=""></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="act6-answer" id="act6-ans3" data-ans=""></div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="act6-answer" id="act6-ans4" data-ans=""></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="act6-answer" id="act6-ans5" data-ans=""></div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="act6-answer" id="act6-ans6" data-ans=""></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="act6-counter"><span id="act6-counter"></span>/12 answers (<span id="act6-percent"></span>%)</div>
+                    </div>
+                    <div class="col-md-6">
+                      <div id="act6-forward" style="display: none;">Next</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row activity-section" id="activity-section-9" style="display: none;">
+            <div class="col-md-12">
+              <div style="width: 100%; text-align: right;">
+                <input type="button" class="sel-main" onclick="show_section(1)" value="Main Screen" />
+                <input type="button" class="sel-next" onclick="show_section(10)" value="Next Activity" />
+              </div>
+              <div class="row">
+                <div class="col-md-4 section-e-left">
+                  <h3>Activity 7</h3>
+                  <b>Word problems</b>
+                  <ul style="margin-top: 40px;">
+                    <li>Use your knowledge of the <span class="which_table"></span> Times Table to help you answer these word problems</li>
+                    <li>After solving the problems, click "Check"</li>
+                  </ul>
+                </div>
+                <div class="col-md-8 section-e-right" id="act7">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row activity-section" id="activity-section-10" style="display: none;">
+            <div class="col-md-12">
+              <div style="width: 100%; text-align: right;">
+                <input type="button" class="sel-main" onclick="show_section(1)" value="Main Screen" />
+              </div>
+              <div class="row">
+                <div class="col-md-4 section-o-left">
+                  <h3><span class="which_table"></span> Times Table Test</h3>
+                  <b>Type in the answers as questions come</b>
+                  <ul style="margin-top: 40px;">
+                    <li>Each answer should be typed within 10 seconds</li>
+                    <li>Summary will show up once the activity is complete</li>
+                  </ul>
+                </div>
+                <div class="col-md-8 section-o-right" id="act8-init" style="text-align: center;">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="act8-question" id="act8-start" style="cursor: pointer;">Start the test</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8 section-o-right" id="act8-main" style="text-align: center; display: none;">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="act8-question" id="act8-question"></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div style="font-size: 20px; padding: 7px;"><span id="act8-counter"></span> / 12<br />answers</div>
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" id="act8-txt" />
+                    </div>
+                    <div class="col-md-3">
+                      <div style="font-size: 20px; padding: 7px;"><span id="act8-time"></span> seconds<br />remaining</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="act8-answer" onclick="calc(1)">1</div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="act8-answer" onclick="calc(2)">2</div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="act8-answer" onclick="calc(3)">3</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="act8-answer" onclick="calc(4)">4</div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="act8-answer" onclick="calc(5)">5</div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="act8-answer" onclick="calc(6)">6</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="act8-answer" onclick="calc(7)">7</div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="act8-answer" onclick="calc(8)">8</div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="act8-answer" onclick="calc(9)">9</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="act8-answer" onclick="bsp()"><-</div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="act8-answer" onclick="calc(0)">0</div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="act8-answer" id="act8-forward">Next</div>
+                      <input type="hidden" id="act8-cnt" />
+                      <input type="hidden" id="act8-scr" />
+                      <input type="hidden" id="act8-ans" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
